@@ -1,0 +1,34 @@
+{% extends "header.html" %}
+{% import "bootstrap/wtf.html"  as wtf%}
+{% block body %}
+
+<body>
+	<div class="container">
+		<h4>Register</h4>
+		<br>
+        <form method="post" action="/register/" class="mx-xl-5">
+        	{{ form.hidden_tag() }}
+            <div class="md-form ">
+            {{ wtf.form_field(form.username) }}
+            </div>
+            <div class="md-form">
+             {{wtf.form_field(form.email)}}   
+            </div>
+            <div class="md-form ">
+            {{ wtf.form_field(form.password) }}
+            </div>
+
+           <div class="text-center mb-4">
+           <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+           </div>
+
+        </form>
+	</div>
+</body>
+
+
+
+
+
+
+{% endblock %}

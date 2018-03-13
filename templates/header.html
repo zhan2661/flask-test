@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Temple</title>
+	<link rel = "stylesheet" href = "{{url_for('static',filename = 'css/my.css')}}">
+        <link rel = "stylesheet" href = "{{url_for('static',filename = 'css/bootstrap.min.css')}}">
+        <link rel = "stylesheet" href = "{{url_for('static',filename = 'css/mdb.min.css')}}">
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header>
+   <nav class="navbar navbar-dark ">
+    <a class="navbar-brand" href="http://www.1point3acres.com/bbs/">
+        <img src="{{url_for('static',filename='images/logo.png')}}" >
+    </a>
+   <ul class="nav navbar-nav navbar-right"  style=" display: inline-block">
+      <a href="/dashboard/"><button type="button" class="btn btn-primary">Dashboard</button></a>
+      <a href="/register/"><button type="button" class="btn btn-primary">Sign Up</button></a>  
+      <a href="/logout/"><button type="button" class="btn btn-primary">Log Out</button></a>         
+       
+   </ul>
+  </nav>
+</header>
+<body>
+     <div class="border-row" style="width: 100%; margin-bottom: 15px"></div>
+
+
+
+      <div class="container-fiuid"  style="min-height: 100%  width:80%">
+      
+
+
+
+      {% block body %}      {% endblock %}
+
+      </div>    
+
+
+
+
+
+
+
+
+        <script type="text/javascript" src="{{url_for('static',filename = 'js/jquery-3.2.1.min.js')}}"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="{{url_for('static',filename = 'js/popper.min.js')}}"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="{{url_for('static',filename = 'js/bootstrap.min.js')}}"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="{{url_for('static',filename = 'js/mdb.min.js')}}"></script>
+
+</body>
+</html>
+
