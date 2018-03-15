@@ -1,4 +1,3 @@
 # flask-test
-# only one user in the database
-# username:test
-# password:12345678
+# 按照discuz的数据库模板来写了
+
