@@ -9,6 +9,12 @@
         <link rel = "stylesheet" href = "{{url_for('static',filename = 'css/bootstrap.min.css')}}">
         <link rel = "stylesheet" href = "{{url_for('static',filename = 'css/mdb.min.css')}}">
         <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        table, th, td {
+           border: 1px solid black;
+           border-collapse: collapse;
+        }
+</style>
 </head>
 
 <header>
@@ -23,8 +29,57 @@
   </nav>
 
 </header>
+<div class="border-row" style="width: 100%; margin-bottom: 15px"></div>
+
 <body>
-    
+    <h3>用户信息
+    </h3>
+    <table>
+      <tr>
+        <th>User name</th>
+         {% for names in name %}
+        <td>  {{names}} </td>
+         {% endfor %}
+       
+      </tr>
+      <tr>
+        <th>Email</th>
+        {% for emails in email %}
+        <td>  {{emails}} </td>
+        {% endfor %}
+      </tr>
+    </table>
+    <br>
+    <br>
+    <h3>帖子列表
+    </h3>
+    <table>
+      <tr>
+        <th>User name</th>
+         {% for author in aut %}
+        <td>  {{author}} </td>
+         {% endfor %}
+       
+      </tr>
+      <tr>
+        <th>Subject</th>
+        {% for subject in sub %}
+        <td>  {{subject}} </td>
+        {% endfor %}
+      </tr>
+    </table>
+    <br>
+    <br>
+    <h3>站内信
+    </h3>
+    <table>
+      <tr>
+        <th>Subject</th>
+        {% for znx in znxSub %}
+        <td>  {{ znx }} </td>
+        {% endfor %}
+      </tr>
+    </table>
 
         <script type="text/javascript" src="{{url_for('static',filename = 'js/jquery-3.2.1.min.js')}}"></script>
         <!-- Bootstrap tooltips -->
